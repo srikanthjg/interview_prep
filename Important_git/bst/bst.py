@@ -212,22 +212,21 @@ class Bst(object):
 
 
 ##############  Vertical BST Print ##############
-    def vertical_bst_print_populate(self,root,x,y):
+    def vertical_bst_print_populate(self,root,x):
         if root==None:
             return
-        root.x=x
-        root.y=y
+
         if x not in self.ht:
             self.ht[x]=[]
         self.ht[x].append(root.val)
-        self.vertical_bst_print_populate(root.right,x+1,y-1)
-        self.vertical_bst_print_populate(root.left,x-1,y-1)
+        self.vertical_bst_print_populate(root.right,x+1)
+        self.vertical_bst_print_populate(root.left,x-1)
 
     def vertical_bst_print(self,root):
         for ele in sorted(self.ht.keys()):
             print self.ht[ele]
 
-########################################################
+#############################################
 
 ##############  Path Sum Print ##############
     pathSum=[]

@@ -26,6 +26,8 @@ class Solution(object):
         return True
 
     def isNumValid(self, board, r,c,val):
+        if board[r][c]!=".":
+            return False
 
         for i in range(len(board[r])):
             if board[r][i] == val:
@@ -85,5 +87,5 @@ s = Solution()
 board=[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 s.solveSudoku(board)
 #print board
-print s.isNumValid(board, 0, 0, val)
+print s.isNumValid(board, 0, 2, "2")
 print ""

@@ -32,7 +32,7 @@ class Solution(object):
             i+=1
             slow = slow.next
             fast = fast.next.next
-
+        #slow will be the mid node
         return i
 
     def reverse(self):

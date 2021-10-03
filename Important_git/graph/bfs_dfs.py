@@ -1,3 +1,14 @@
+"""
+BFS
+T: O(V+E)
+S: O(V)
+
+DFS
+T: O(V+E)
+S: O(V)
+
+"""
+
 
 class Graph(object):
     def __init__(self,numVertices=0):
@@ -9,6 +20,28 @@ class Graph(object):
         v1 = edge[0]
         v2 = edge[1]
         self.graph_dict[v1].append(v2)
+
+    def delEdge(self,u,v):
+        if u==v:
+            return
+
+        adj=self.graph[u]
+        i=0
+        for i in range(len(adj)):
+            if v==adj[i]:
+                break
+        if len(self.graph[u])!=0:
+            self.graph[u].pop(i)
+        """
+        #for undirected Graph
+        adj=self.graph[v]
+        i=0
+        for i in range(len(adj)):
+            if u==adj[i]:
+                break
+        if len(self.graph[v])!=0:
+            self.graph[v].pop(i)
+        """
 
     def dfs_util(self,v,visited):
         visited[v] = True

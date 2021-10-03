@@ -1,60 +1,42 @@
-################################################################################
-def permutation_swap(str_list):
-    #print "A,index,i"
-    permutation_swap_helper(str_list,0)
 
-def permutation_swap_helper(A,index):
-    #print "  "*index,
-    #print A,index,
-    #print "",
-    if(index == len(A)-1):
-        print A
-        return
+def permutationHelper(chosen,rest):
+	print chosen,rest
+	if len(rest)==0:
+		print "".join(chosen)
 
-    for i in range(len(A)):
-        #print i
-        A[i],A[index] = A[index],A[i]
-        permutation_swap_helper(A,index+1)
-        A[i],A[index] = A[index],A[i]
 
-    return
+	for i in range(len(rest)):
+		chosen.append(rest[i])
+		tmp = rest.pop(i)
+		permutationHelper(chosen,rest)
+		chosen.pop()
+		rest.insert(i,tmp)
 
-################################################################################
-def permutation_rec_helper1(chosen,rest):
-    if len(rest)==0:
-        print "".join(chosen)
-        return
-
-    for i in range(len(rest)):
-        chosen.append(rest[i])
-        tmp = rest.pop(i)
-        permutation_rec_helper1(chosen,rest)
-        chosen.pop()
-        rest.insert(i,tmp)
+def permutation(num):
+	chosen = []
+	rest = list(str(num))
+	permutationHelper(chosen,rest)
 
 
 
-def permutation_rec1(A):
-    permutation_rec_helper1([],A)
-    return
+def permutation2Helper(arr,l,r):
+	if l==r:
+		output.append("".join(arr))
+		return
 
-################################ BEST ##########################################
-## PERMUTATION ##
-output=[]
-def permutation_rec_helper2(combo,input_string):
-    #print combo,input_string
-    if(len(combo)==3):
-        print combo
-        output.append(combo)
-        return
+	for i in range(len(arr)):
+		#print i,l
+		arr[i],arr[l] = arr[l],arr[i]
+		permutation2Helper(arr,l+1,r)
+		arr[i],arr[l] = arr[l],arr[i]
 
-    for letter in input_string:
-        permutation_rec_helper2(combo+letter,input_string)
+def permutation2(num):
+	permutation2Helper(list(str(num)),0,len(list(str(num))))
+	return
 
-def permutation_rec2(A):
-    permutation_rec_helper2("",A)
-    return
-
-A = "abc"
-#permutation_swap(list(A))
-print permutation_rec1(list(A))
+num = 123
+output = []
+permutation(num)
+#permutation2(num)
+#print len(sorted(output))
+#print len(sorted(set(output)))

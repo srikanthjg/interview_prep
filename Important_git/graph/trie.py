@@ -50,11 +50,10 @@ class Trie(object):
 s1="hello"
 s2="ello"
 s3="hear"
-"""
+
 trie = Trie()
 trie.add(s1)
 trie.add(s2)
 trie.add(s3)
 
 print trie.search(s1)
-"""

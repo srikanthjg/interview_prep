@@ -1,0 +1,173 @@
+Onsite interviews
+-You will have 5 interviews, for 60 minutes each (one-on-one) with a lunch break (1 hour) in the middle.  There will be 3 coding interviews, 1 on system design and 1 behavioral. 
+Interviews typically start around 10am and I recommend blocking out the entire day. The interview panel will be a mix of 3 Software Development Engineers, Hiring Manager and a Bar Raiser.
+
+Each Amazon interview involves 1-2 coding questions and a related discussion. The flow might be some variation of:
+1) Intro (5 minutes)
+2) The technical Interview (50 minutes)
+	•	Leadership principles (20 minutes)
+	•	Expect 1-2 behavioral based interview questions (tell me about a time….). Good way to prepare is to review Amazon’s leadership principles ahead of time and get a feel for the culture. When answering these type of behavioral questions, think about situations that showcase your strengths—so as it relates to leadership, initiative, motivation, stress tolerance, decision making, persuasiveness, improvement/efficiency, conflicts/disagreements, and objections (dealing with negative feedback).
+	•	Technical skills (30 minutes); areas touched on may include below:
+	•	Algorithms/data structure coding question
+	•	Test code, test cases, unit testing
+	•	System Design
+
+Basic format of answering Behavioral Interview questions:
+Your responses to these types of questions should be given in a STAR format, which corresponds to the way they are phrased. You should respond by describing a particular Situation or Task relevant to the question; the Action(s) you took and the Results.
+
+For the On-site interview, you will need to come up with an example for each principle—recommendations as you are thinking of these examples:
+	•	Ensure your examples are very detailed—use the STAR method (situation, task, action and result—in order)
+	•	Include metrics/data
+	•	Think of high impact/influence examples (times you lead something big, solving a complex problem, simplifying processes/systems, etc…)
+
+
+Amazon’s Leadership Principles
+Amazon’s Leadership Principles are extremely important to us! How important are these? EXTREMELY! Highly recommend reviewing them.—see links:
+https://www.amazon.jobs/en/principles.
+
+Now that you know the Leadership Principles, here’s what we are expecting from you from each one of Principles
+
+Customer Obsession- focus on the customers/ end users
+
+Insists on the highest standards- used to evaluate coding and also ensure that the candidate: drives high standards and quality; raises the bar on technical skills; works constructively under stress and pressure; strives for continuous improvement – never assuming that anything is perfect.
+
+Deals with ambiguity- demonstrate that he or she can: handle intentionally vague requirements; change strategies quickly when approach doesn’t work; work through open ended questions; is adaptable & quick learning.
+
+Bias for action- quickly identifies if more information is needed before taking action; analyzes facts quickly; is able to evaluate data and information effectively; and uses own initiative to drive forward.
+
+Invent & simplify- resourceful and discover ways to invent while also finding the simplest solution. A candidate's designs and solutions should be both novel and simple. The candidate should not needlessly complicate their solutions and demonstrate that he/she can think outside the box to address problems creatively
+
+Have backbone, Disagree & Commit- Challenge decisions when he or she disagrees; has conviction and is tenacious, not compromising for the sake of social cohesion; once a decision is determined, they commit wholly; challenges "the way it has always been done"; demonstrates the courage to do what is right for the business.
+
+Ownership- Able to grasp what is business critical and best for the business and our customers. He or she will: demonstrate strong commitment to long-term success; work to obtain optimal return on investment from available resources; accept responsibility for actions and outcomes; and take initiative and be persistent
+
+Earns Trust- garner respect and drive consensus and influence others by being right a lot; clearly, directly, promptly and appropriately communicate; and be open and listen to new ideas and ways of getting things done.
+
+Learn & Be Curious- self-motivated to learn themselves rather than needing to be taught; open to new ideas and ways of getting things done; able to seek and take feedback; able to take learnings from mistakes to better oneself; curious and has a passion to learn; passionate about keeping updated with new technologies; able to grasp new concepts quickly; able to come up to speed in a new area quickly and comprehensively
+
+Delivers results & Are right a lot- it is about honoring commitments and getting the job done. It's also about inventing our way out of problems and making sure we get the RIGHT things done, making these two competencies a strong pairing. Ability to demonstrate strong clarity of thought and good instincts that inform his or her software development decisions; smart about working on the right stuff and working through applicable tradeoffs; gets things done with speed and accuracy; doesn’t pretend to know everything, but can verify what they do know; has strong judgment.
+
+
+
+CODING
+Basic Format of the Technical Interview Questions:
+	•	You will be asked an open ended question. Ask clarifying questions, devise requirements.
+	•	You will be asked to explain it in an algorithm.
+	•	Convert it to a workable code. (Hint: Don't worry about getting it perfect because time is limited. Write what comes but then refine it later. Also make sure you consider corner cases and edge cases, production ready.)
+	•	Optimize the code to make it run faster, follow it with test cases and find any bugs.
+
+Coding: Problem Solving:
+Begin with high level coding/technical question/problems, assessing for the candidate’s ability to think through problems, identify alternatives, and weigh different options; see potential roadblocks and challenges with solutions.
+Provide a dry run (by using pseudo code), discuss different approaches, and describe how to implement
+
+Clarifying Questions:
+	•	If this were a real life problem, how could I proactively act on what issues might arise?
+	•	Make sure you are answering the right part of the problem and that you fully understand the problem. Especially if the question is open-ended!
+	•	They are looking for you to gather the requirements of the problem
+	•	Try to think of it as you are tutoring someone and you need to explain it thoroughly and clearly. Try to be detailed in your explanations.
+	•	Talk through your process with the interviewer (Think out loud)
+	•	Take advantage of hints they give you. The hints are not that obvious, but it will guide you towards the right direction.
+	•	Other Solutions:
+Maybe state the other solutions and state why you moved forward the way you did
+Mention other solutions you would have done in real life
+This will show them your breadth of knowledge
+Even if you forgot an algorithm that you could have used, will help them understand what you know
+
+Coding: Data Structures and Algorithms
+General CS fundamentals and ability to work effectively through data structures and algorithms
+Working with vague scenarios designed to see how to work through a problem
+Knows how to: apply various data structures & algorithms; makes good trade-offs; and can combine data structures to solve complex use cases (that scale)
+Algorithms:
+Go over your CS fundamentals - data structure, binary tree and sorting algos, hash tables and arrays, Big O-notations (running time or run time complexity), etc. 
+
+-Generally basic Algorithms from CS 101 books. Mostly binary search, sort. Be able to traverse a binary tree in every way thinkable. Depth-first traversal. In-place/ in-order. With recursion, without recursion. Know search algorithms to find certain characters in a string, sort algorithms to reverse certain characters in a string. Really know how to implement a DFS/ BFS properly, etc.
+-Think about different algorithms and algorithmic techniques (sorting, divide-and-conquer, dynamic programming/memoization, recursion).
+-Runtimes: ALWAYS think about runtimes. Big O Notation. How would you improve the average or worst case runtimes of these problems. Can you get it to linear in space, linear in computational time? Look to optimize time complexity.
+-You will be asked about O(Memory) constraints, the complexity of the algorithm you are writing and its runtime - O(N^2), O(N) etc.
+
+Data Structures:
+-Similar to Algorithms, a portion of our Data Structures assessment is based on basic data structures. Good to refresh on these since normally people use custom data structures at their job. Know the performance pros and cons, tradeoffs of hashing (hashmaps/ hashtables), know what a heap is, be able to turn a doubly linked list into a binary, lists, set, tables, trees, etc.
+-Know your collection libraries, language-specific libraries for data structures. (ie for Java - know the collection libraries in Guava. Know basic streams, the I/O). Basically be able to do data structures that contain other data structures.
+
+
+
+Coding (logical and maintainable- stays maintainable for at least 5 years):
+Writes code that is syntactically correct and does what it is intended to do; builds maintainable and readable code; writes idiomatic code
+Be as efficient as possible in your implementation.
+Don’t be overly complicated. They should be able to look over your code and know exactly what it will do.
+When you get too complicated, you run the risk of having more bugs. 
+Before you refine the code, ask if the interviewer if he has any questions about code
+Think of it that your code will go through code review, which it will when you go through debrief
+The interviewer will either type out your code, or take a picture of it afterwards
+              
+
+Coding/Code Quality:
+Sharpen coding language fluency by manually practicing writing clean, concise, simple code (don’t prepare with an editor, compiler, OR IDE).
+Don’t worry about rote memorization such as runtimes or API/native calls. It's good to know how to figure out approximate runtimes on the fly but the code you write is more important. 
+
+Testing:
+Test cases - you do not have to code the tests. Just what you would plan to test.
+Think QUALITY not quantity. More important to try to break your own code
+Creating test cases involves writing null inputs, inputs that don't necessarily conform to the bounds. Negative tests. Unique cases
+Come up with test cases that your code will fail
+When you have bugs in your code, how do you handle it?
+After the coding then have your test cases organized and systematically ready to catch all the bugs.
+Think about testing principles and what testing would have to be done: Security, Scalability, Reliability, Performance, etc.
+Think about how to write software to test software and why/how/where software breaks
+Testing knowledge - debugging, refactoring, unit testing, test case generation.
+
+Best Practices:
+-Practice Defensive Programming. Write code that proactively protects itself from nulls, empty strings, redundancy etc. Good to take on a slight sense of paranoia when writing your code. Always look for what can go wrong in your code and try to proactively adjust.
+-Debug/ review your code frequently. Look for any hard to find nulls, off-by-one errors, redundancy, etc. Tell your interviewer what you are doing and what you are looking for.
+-Testing the code: proactively explain your test strategy/ approach to every interviewer before you even start coding. Talk about how you’ll ensure test coverage all the way down to the distributed systems level. While coding, always proactively ensure that the solution is fully tested, don’t wait for the interviewer to ask for test coverage. Proactively provide all of the basic test cases for the solution, and then provide 2-3 additional tests for odd edge/ corner cases.
+
+
+System Design:
+Think about complexity and scale of the solution
+Identify/explain the business problem, figure out the constraint, and propose a solution
+Ask sufficient questions to clarify the requirements (dealing with ambiguity)
+Ability to build solid design for a substantial systems
+Discuss the rationale of the design (why they chose that design)
+Quickly identifying key tradeoffs in design
+Balance operational performance (metrics, failures, scalability, etc.) with customer needs
+Deliver a design in production with considerations of deployment, scaling, failures, availability, and performance
+
+https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions
+https://www.youtube.com/results?search_query=amazon+system+design+interview
+
+
+Best Practices and Online Resources
+DO’s:
+	•	Proactively debug your own code, that will look great
+	•	Run a few examples to check the code and make sure you don’t assume that your code works.
+	•	Exhaustively check for edge cases, check for corner cases.
+	•	If code looks like it is repeating, try refactoring it.
+	•	If you use a recursion method, make sure your recursion terminates.
+	•	Identify bugs and fix them right away. Read it line by line.
+	•	The first solution isn’t always the most optimal.
+	•	Use reasonable variable names to clean up the code (can use x or i).
+ 
+DON’T’s:
+Where people fail (technically):
+	•	Making the problem more complex than it is
+	•	Using pseudo code outside of planning stages.
+	•	When candidates just jump into design or coding without first analyzing the problem/question asked when candidates make assumptions. You will be asked a broad question and asking clarifying questions are key!
+	•	Inability to understand the problem and solve the problems
+	•	A lot of times candidates come up with an algorithm, but they don't know how to write the code to implement it
+	•	Focusing on finding the optimal solution. It's fine to go with something that's close to optimal, as long as you can implement it
+	•	When candidates don't talk out loud about what they're doing as they're doing it
+	•	When candidates don’t pick up on hints or give up on a problem
+	•	If you flip languages mid-interview. If you start the interview coding in Java, don’t end in C++. It shows bad thought process and confuses interviewers.
+
+
+Online Resources
+Coding:
+	•	Leetcode: https://leetcode.com/
+	•	HackerRank: https://www.hackerrank.com/
+	•	Interview Cake: www.interviewcake.com/. Interview Cake is awesome because it helps you walk through the thought process of how you solve a problem as opposed to just giving you the problem and its answer.
+	•	Topcoder.com: To practice for your interview you may want to visit the website www.topcoder.com. If you launch the "Arena" widget and then go to the practice rooms where you can play with the problems in the first/second division as a warm up.
+
+System Design:
+	•	Understand high scale architecture. Go look at how other big sites are structured: http://highscalability.com/blog/category/example
+	•	https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions
+	•	https://www.youtube.com/results?search_query=amazon+system+design+interview

@@ -1,6 +1,5 @@
 #https://leetcode.com/problems/prison-cells-after-n-days/solution/
 class Solution(object):
-
     def nxtDay(self,cells):
         cells_copy=cells[:]
         cells_copy[0]=0
@@ -22,22 +21,21 @@ class Solution(object):
 
         day=0
         n=len(cells)
-        seen={}
+        seen=set()
         cycle=False
         while day<N:
             next=self.nxtDay(cells)
-            tup=tuple(cells)
+            tup=tuple(next)
             if tup in seen:
                 cycle=True
                 break
-
-            seen[tup]=1
+            seen.add(tup)
             cells=next
             day+=1
 
-        print day,cells
+        #print day
         if cycle:
-            N=N%(day-1)
+            N=N%(day)
             for i in range(N):
                 cells=self.nxtDay(cells)
         return cells

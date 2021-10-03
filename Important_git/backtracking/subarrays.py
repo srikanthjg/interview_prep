@@ -23,3 +23,4 @@ def subarray(A):
 A = "123"
 out = subarray(A)
 #print out
+## 2 for loops

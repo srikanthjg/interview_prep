@@ -1,3 +1,29 @@
+"""
+
+abc,""
+
+a,bc
+    ab,c
+        abc,""
+    ac,b
+        acb,""
+b,ca
+    bc,a
+        bca,
+    ba,c
+        bac,
+c,ab
+    ca,b
+        cab,
+    cb,a
+        cba,
+"""
+
+
+
+
+
+
 ################################################################################
 def permutation_swap(str_list):
     #print "A,index,i"

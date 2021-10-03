@@ -5,8 +5,9 @@ class ListNode(object):
          self.next = None
 
 class Solution(object):
-    head = None
-    count=0
+    def __init__(self):
+        self.head = None
+        self.count=0
     def printLL(self):
         cur = self.head
         while(cur):
@@ -56,19 +57,22 @@ class Solution(object):
 
         return
 
+
     def swapPairs(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
+        if head==None or head.next==None:
+            return head
 
-        cur = self.head
-        if(cur==None):
-            return None
+        first=head
+        second=head.next
 
-        self.swapHelper(head,cur)
-        head = self.head
-        return head
+        first.next=self.swapPairs(second.next)
+        second.next=first
+        return second
+
 
 head=None
 sol = Solution()
@@ -77,6 +81,6 @@ for i in range(1,4):
 
 sol.printLL()
 print "count=%d"%sol.count
-sol.swapPairs(head)
+sol.head=sol.swapPairs(sol.head)
 print ""
 sol.printLL()

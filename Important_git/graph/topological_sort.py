@@ -1,3 +1,9 @@
+
+"""
+
+Time Complexity: O(V+E)  ==> mainly DFS
+"""
+
 class Solution(object):
 
     topo_sort_result=[]
@@ -20,18 +26,19 @@ class Solution(object):
 
         return False
 
-    def topo_sort(self,g,visited):
+    def topo_sort(self,g):
+        visited={}
         path={}
         # this loop is for all the individual roots==>ingress=0
         #Will work for diconnected graphs also
         for v in g.keys():
             if v not in visited:
-                t=self.topo_sort_helper(g,v,visited,path)
+                t=self.topo_sort_helper(g,v,visited,path) ##DFS
                 if t==True:
                     return True
         return False
 
-       
+
     def canFinish(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -40,7 +47,7 @@ class Solution(object):
         """
 
         g={}
-        visited={}
+
 
         # Create a Directed Graph
         for v in range(numCourses):
@@ -48,6 +55,6 @@ class Solution(object):
         for u,v in prerequisites:
             g[u].append(v)
 
-        t=self.topo_sort(g,visited)
+        t=self.topo_sort(g)
         #print self.topo_sort_result,t
         return not t

@@ -1,8 +1,12 @@
-
+"""
 ##Single Source Shortest Path
 # Not valid for negative weights
 ##Greedy
 
+Time Complexity: O((V+E)logV)
+Time Complexity: O(ElogV)
+Djisktra and bellman uses relaxing nodes
+"""
 import heapq
 class Graph():
     def __init__(self,num_vertex=0):

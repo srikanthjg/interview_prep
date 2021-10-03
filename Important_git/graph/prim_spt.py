@@ -1,5 +1,18 @@
 #https://bradfieldcs.com/algos/graphs/prims-spanning-tree-algorithm/
+"""
+Greedy
+similar to djikstra , Uses min heap.
+Prim does not use relax nodes. That is only for distances
 
+
+ALGO:
+While T is not yet a spanning tree
+   Find an edge that is safe and smallest to add to the tree
+   Add the new edge to T
+
+
+Time Complexity: O(ElogV)
+"""
 from collections import defaultdict
 import heapq
 class Graph():
@@ -20,18 +33,20 @@ class Graph():
 
     def prim_spanning_tree(self,starting_vertex):
         mst = {}
-        visited = set([starting_vertex])
+        visited = set(starting_vertex)
+        edges=[]
+        #Build edges with min heap for starting vertex
         for to, cost in self.graph[starting_vertex]:
-            edges = [(starting_vertex, to,cost)]
-        heapq.heapify(edges)
+            heapq.heappush(edges,(cost,starting_vertex, to)) #==> heapify based on cost (x[0])
+        #heapq.heapify(edges)
 
         while edges:
-            frm,to,cost=heapq.heappop(edges)
+            cost,frm,to=heapq.heappop(edges)
             if to not in visited:
                 visited.add(to)
-                mst[frm]=to
-                for u,wt in self.graph[to]:
-                    heapq.heappush(edges,(frm,u,wt))
+                mst[frm]=(to,cost)
+                for to_nxt,wt in self.graph[to]:
+                    heapq.heappush(edges,(wt,to,to_nxt))
         return mst
 
 sol=Graph(6)

@@ -17,24 +17,14 @@ class Solution(object):
             #self.s=self.s+1
             return True,root.val
 
-        """
-        #one child
-        if root.right !=None and root.left:
-            if root.val==root.left.val:
-                #self.s=self.s+1
-                return True,root.val
-            else:
-                return False,root.val
-
-        if root.left!=None and root.right:
-            if root.val==root.right.val:
-                return True,root.val
-            else:
-                return False,root.val
-        """
         l,ret = self.countUnivalSubtrees_h(root.left)
         r,ret = self.countUnivalSubtrees_h(root.right)
-        f = (l and r) and (root.val==ret)
+        if root.left and root.right:
+            f = (l and r) and (root.val==retl) and (root.val==retr)
+        if root.left and root.right==None:
+            f = l and (root.val==retl)
+        if root.left== None and root.right:
+            f = r and (root.val==retr)
         if f:
             self.s=self.s+1
 

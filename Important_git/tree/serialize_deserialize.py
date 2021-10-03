@@ -20,19 +20,20 @@ class Bst(object):
         if node == None:
             self.arr.append('X')
             return
-        self.arr.append(node.val)
+        self.arr.append(node)
         self.serialize(node.left)
         self.serialize(node.right)
         return
 
     def createNode(self,arr):
-        if arr[0] == 'X':
-            node = None
-            arr.pop(0)
-            return node
+        if len(arr)==0:
+            return None
 
-        node = Node(arr[0])
-        arr.pop(0)
+        node1=arr.pop(0)
+        if node1 == 'X':
+            return None
+
+        node = node1#Node(node.val)
         node.left = self.createNode(arr)
         node.right= self.createNode(arr)
         return node

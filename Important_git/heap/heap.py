@@ -24,9 +24,9 @@ class MaxHeap(MinHeap):
 """
 
 """
-
-heapify       ==> top down
-insert/delete ==> bottom up
+max_heap_build=> O(N)
+heapify       ==> top down  ==> O(logN)
+insert/delete ==> bottom up ==> O(logN)
 
 """
 
@@ -77,6 +77,8 @@ class Heap():
         while arr[i]>arr[parent]:
             arr[parent],arr[i]=arr[i],arr[parent]
             i=parent
+            if i==0:return
+            parent=(i-1)//2
             #print i
         return
 
@@ -87,7 +89,7 @@ class Heap():
         arr.pop()
         self.max_heapify(arr,index)
         return
-        
+
 arr=[2,5]
 heap=Heap()
 heap.build_max_heap(arr)

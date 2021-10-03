@@ -24,12 +24,21 @@ class Solution(object):
             return
         q=[root]
         while q:
+            level=[]
             for i in range(len(q)):
                 cur=q.pop(0)
-                if cur:
+                if cur.left:
                     q.append(cur.left)
+                    level.append(cur.val)
+                else:
+                    level.append('X')
+                if cur.right:
                     q.append(cur.right)
-                    bst.append(cur.val)
+                    level.append(cur.val)
+                else:
+                    level.append('X')
+            bst.append(level)
+
 
 
         return

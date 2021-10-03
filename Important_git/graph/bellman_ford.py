@@ -3,6 +3,11 @@
 bellman_ford is used to find negative cycles NOT positive cycles!!!!!!!
 So it cant be used to find cycle in a graph generically
 
+#Weights can be negative
+#single source shortest path
+
+O(V.E)
+
 """
 
 class Graph():
@@ -39,6 +44,7 @@ class Graph():
         #edge = v->u
         for i in range(self.num_vertex-1):
             for cur,nxt,wt in edges:
+                #RELAX
                 if self.distance[nxt]>self.distance[cur]+wt:
                     self.distance[nxt]=self.distance[cur]+wt
 

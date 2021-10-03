@@ -2,11 +2,8 @@ class Solution(object):
     def dfs(self,root,grid,not_visited):
         #print root
         i,j=root
-        #left,rigth,up,down
-        dir=[(-1,0),(1,0),(0,1),(0,-1)]
-
-        neigh=self.getNeigh(grid,root,not_visited)
-        for newx,newy in neigh:
+        neigh_list=self.getNeigh(grid,root,not_visited)
+        for newx,newy in neigh_list:
             del not_visited[(newx,newy)]
             self.dfs((newx,newy),grid,not_visited)
 
@@ -27,18 +24,16 @@ class Solution(object):
         i,j=root
         #left,rigth,up,down
         q=[root]
-
         while q:
             node=q.pop(0)
+            neigh_list=self.getNeigh(grid,node,not_visited)
+            #Add children
+            for x,y in neigh_list:
+                q.append((x,y))
+            #Delete node from not_visited
             if node in not_visited:
-            #print not_visited
                 del not_visited[node]
-            else:
-                continue
-            adj=self.getNeigh(grid,node,not_visited)
-            for x,y in adj:
-                if (x,y) in not_visited:
-                    q.append((x,y))
+
 
     def numIslands(self, grid):
         """
@@ -62,12 +57,12 @@ class Solution(object):
 
             #pick a root
             root=keys_arr[0]
-            #del not_visited[root]
-            #print root,keys_arr
+            del not_visited[root]
             self.bfs(root,grid,not_visited)
             count+=1
         return count
 
 sol=Solution()
-grid=[['1','1','0','0','0'],['1','0','0','1','1']]
+grid=[['1','1','0','1','0'],\
+      ['1','0','0','1','1']]
 print sol.numIslands(grid)
