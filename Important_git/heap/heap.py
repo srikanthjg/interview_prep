@@ -93,5 +93,5 @@ class Heap():
 arr=[2,5]
 heap=Heap()
 heap.build_max_heap(arr)
-heap.insert(arr,7)
+heap.heap_insert(arr,7)
 print arr

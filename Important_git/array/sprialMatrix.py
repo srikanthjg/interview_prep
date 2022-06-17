@@ -14,9 +14,10 @@ def spiralMatrix(input):
 			r = (row+dir[direction][0])%input
 			c = (col+dir[direction][1])%input
 
+			#Change dir
 			if(arr[r][c]!=-1):
 				direction=(direction+1)%4
-				
+
 			row=(row+dir[direction][0])%input
 			col=(col+dir[direction][1])%input
 

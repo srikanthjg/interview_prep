@@ -17,7 +17,7 @@ class Solution:
 def x(tup):
     #print tup
     #return (tup[1])
-    return (tup[1],tup[0])
+    return (tup[1])
 
 a=[('c',-1),('b',8),('d',2),('a',2)]
 a.sort(key=x)
