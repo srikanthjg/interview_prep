@@ -1,40 +1,29 @@
 
 
 def bubble_sort(A):
-    for i in range(0,len(A)):
-        for j in range(0,len(A)-1-i):
-            if(A[j]>A[j+1]):
-                A[j+1],A[j] = A[j],A[j+1]
+    for i in range(len(A)):
+        for j in range(len(A)-i):
+            if(A[j]>A[i]):
+                A[i],A[j] = A[j],A[i]
 
     return A
 
 def insertion_sort(A):
     pass
 
-def count_sort(A,k):
-    count = [0 for i in range(k)]
-    output = [0 for i in range(len(A)+1)]
+def count_sort(A):
+    arr = [0]*100
+    output = []
     for i in range(len(A)):
-        count[A[i]]+=1
+        arr[A[i]]+=1
     #print arr
-
-    """
     for i in range(len(arr)):
         if(arr[i]!=0):
             while arr[i]!=0:
                 output.append(i)
                 arr[i]-=1
-    """
 
-    for i in range(1,len(count)):
-        count[i]+=count[i-1]
-
-    print output,count
-    for i in range(len(A)-1,-1,-1):
-        output[count[A[i]]]=A[i]
-        count[A[i]]-=1
-
-    print output[1:]
+    print output
 
 
 def count_sort_radix(A,exp,max):
@@ -52,7 +41,6 @@ def partition(A,l,r):
     i=l-1
     #print "in partition"
     #print A
-
     for j in range(l,r):
         if(A[j]<pivot):
             i+=1
@@ -72,19 +60,19 @@ def quick_sort(A,l,r):
     quick_sort(A,pivot+1,r)
     return A
 
-def merge_sort(A):
-    if(len(A)>1):
-        mid = (len(A))//2
+def merge_sort(A,l,r):
+    if(l<r):
+        output = []
+        mid = (l+r)//2
         L = A[:mid] #exclude mid
         R = A[mid:] #include mid
 
-        merge_sort(L)
-        merge_sort(R)
+        merge_sort(L,l,mid)
+        merge_sort(R,mid+1,r)
 
         #merge logic
-        i=0 #L
-        j=0 #R
-        k=0 #A
+        j=0 #L
+        k=0 #R
 
         i = j = k = 0
 
@@ -112,8 +100,7 @@ def merge_sort(A):
         return A
 
 
-A = [8,5,3,2,8]
+A = [15,4,27,1,48]
 
 #print  quick_sort(A,0,len(A)-1)
-print merge_sort(A)
-#print count_sort(A,10)
+print merge_sort(A,0,len(A)-1)

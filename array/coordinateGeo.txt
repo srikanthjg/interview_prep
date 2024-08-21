@@ -1,8 +1,0 @@
-Distance between 2 points: max(X, Y) ==> when we can move linear and diagonal
-cartisian distance = sqrt((y2-y1)**2 - (x2-x1)**2)
-
-Slope:
-m = y2-y1/x2-x1
-
-Perpendicular:
-m1m2 = -1

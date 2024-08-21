@@ -8,7 +8,7 @@ def grey_code(n):
 
 
     for i in range(1,n):
-        L2 = L1[:]
+        L2 = copy.deepcopy(L1)
         L2.reverse()
 
         #print "reversed L2: %r"%L2
@@ -24,4 +24,4 @@ def grey_code(n):
 
     return L1
 
-print grey_code(3)
+print grey_code(4)
